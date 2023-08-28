@@ -17,7 +17,7 @@ public class Main {
         System.out.println("Минимальное время полета между городами Владивосток и Тель-Авив для каждого авиаперевозчика:");
         Map<String, Integer> map = dataService.minFlightTime(ORIGIN_NAME, DESTINATION_NAME, convertedData);
         for (Map.Entry<String, Integer> m : map.entrySet()) {
-            System.out.println(m.getKey() + " = " + m.getValue() / 60 + ":" + m.getValue() % 60);
+            System.out.println(m.getKey() + " = " + m.getValue() / 60 + " часов " + m.getValue() % 60 + " минут");
         }
 
         System.out.println("Разница между средней ценой и медианой для полета между городами  Владивосток и Тель-Авив:");

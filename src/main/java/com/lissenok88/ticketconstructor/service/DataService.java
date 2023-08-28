@@ -50,7 +50,7 @@ public class DataService {
                 .sorted(Comparator.comparing(TicketTo::getPrice))
                 .map(TicketTo::getPrice).toList();
         int middleList = prices.size() / 2;
-        return (prices.size() % 2 != 0) ? prices.get(middleList + 1) : (prices.get(middleList + 1) + prices.get(middleList)) / 2;
+        return (prices.size() % 2 != 0) ? prices.get(middleList) : (prices.get(middleList - 1) + prices.get(middleList)) / 2;
     }
 
     private TicketTo ticketTo(Ticket ticket) {
